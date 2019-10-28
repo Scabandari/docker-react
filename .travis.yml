@@ -1,11 +1,8 @@
 sudo: required
-services:
-  -docker
+services: -docker
 
-before_install: 
+before_install:
   - docker build -t scabandaryan/docker-react  -f Dockerfile.dev .
 
-  script:
+script:
   - docker run scabandaryan/docker-react npm run test -- --coverage
-
-  
