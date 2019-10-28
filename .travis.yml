@@ -5,4 +5,7 @@ before_install:
   - docker build -t scabandaryan/docker-react  -f Dockerfile.dev .
 
 script:
-  - docker run -e CI=true scabandaryan/docker npm run test
+  - docker run -e CI=true scabandaryan/docker-react npm run test
+
+    
+
